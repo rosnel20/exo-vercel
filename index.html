@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="welcome.css">
-    <title>TaskFlow</title>
-    
+    <title>TaskFlow - Gestion de projets informatiques</title>
 </head>
 <body>
    <nav class="navbar navbar-expand-lg floating-navbar">
@@ -69,11 +67,11 @@
                     </p>
                     
                     <div class="header-buttons">
-                        <a href="{{route('inscription')}}" class="btn-primary-custom">
+                        <a href="register.html" class="btn-primary-custom">
                             <i class="fas fa-rocket"></i>
                             Commencer gratuitement
                         </a>
-                        <a href="#" class="btn-secondary-custom">
+                        <a href="#Fonctionnalités" class="btn-secondary-custom">
                             <i class="fas fa-play-circle"></i>
                             Voir la démo
                         </a>
@@ -126,7 +124,7 @@
         </div>
     </header>
 
- <section id="Fonctionnalités">
+    <section id="Fonctionnalités">
         <div class="container">
             <div class="section-header">
                 <h2>Fonctionnalités principales</h2>
@@ -181,7 +179,7 @@
         </div>
     </section>
 
- <section class="why-section" id="nous">
+    <section class="why-section" id="nous">
         <div class="container">
             <div class="section-title">
                 <h2>Pourquoi choisir TaskFlow?</h2>
@@ -255,7 +253,7 @@
         </div>
     </section>
 
-     <footer>
+    <footer>
         <div class="footer-content">
             <!-- Stats Section -->
             <div class="footer-stats">
@@ -331,7 +329,7 @@
                     <h4>Contact</h4>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Yaounde, Cameroun<br>centre</span>
+                        <span>Yaounde, Cameroun<br>Centre</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -357,6 +355,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
         // Animation au scroll
@@ -386,7 +385,8 @@
                 }
             });
         }
-         // Animation de la barre de progression au scroll
+
+        // Animation de la barre de progression au scroll
         function updateProgress() {
             const timelineContainer = document.querySelector('.timeline-container');
             const timelineProgress = document.querySelector('.timeline-progress');
