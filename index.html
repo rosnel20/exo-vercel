@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="welcome.css">
+    <title>TaskFlow</title>
+    
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg floating-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="brand-text">TaskFlow</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#Acceuil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Fonctionnalités">Fonctionnalités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nous">Pourquoi nous?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-login" href="{{route('connexion')}}">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-signup" href="{{route('inscription')}}">
+                            <i class="fas fa-user-plus"></i>
+                            Inscription
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <header id="Acceuil">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 header-left">
+                    <div class="badge-new">
+                        <i class="fas fa-sparkles"></i>
+                        Nouvelle version disponible
+                    </div>
+                    
+                    <h1>
+                        Gérez vos projets <span class="highlight">informatiques</span> avec efficacité
+                    </h1>
+                    
+                    <p class="lead">
+                        Une solution complète pour les ingénieurs des travaux informatiques. 
+                        Planifiez, suivez et livrez vos projets en toute sérénité.
+                    </p>
+                    
+                    <div class="header-buttons">
+                        <a href="{{route('inscription')}}" class="btn-primary-custom">
+                            <i class="fas fa-rocket"></i>
+                            Commencer gratuitement
+                        </a>
+                        <a href="#" class="btn-secondary-custom">
+                            <i class="fas fa-play-circle"></i>
+                            Voir la démo
+                        </a>
+                    </div>
+
+                    <div class="header-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5K+</span>
+                            <span class="stat-label">Projets gérés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfaction client</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support technique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 header-right">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Dashboard TaskFlow" class="header-image">
+                        <div class="image-decoration"></div>
+                        
+                        <!-- Floating cards -->
+                        <div class="floating-card floating-card-1">
+                            <div class="floating-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <div class="floating-text">Tâche complétée</div>
+                                <div class="floating-subtext">Il y a 2 min</div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card floating-card-2">
+                            <div class="floating-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <div class="floating-text">5 membres actifs</div>
+                                <div class="floating-subtext">En ligne maintenant</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ <section id="Fonctionnalités">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fonctionnalités principales</h2>
+                <p>Découvrez comment TaskFlow peut transformer la gestion de vos projets informatiques</p>
+            </div>
+            
+            <div id="carouselFeatures" class="carousel carousel-custom slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselFeatures" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselFeatures" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselFeatures" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" class="d-block w-100" alt="Gestion de projets">
+                        <div class="carousel-caption">
+                            <h5>Gérez vos projets en toute simplicité</h5>
+                            <p>Interface intuitive pour planifier, organiser et suivre tous vos projets informatiques en temps réel. Assignez des tâches, définissez des priorités et respectez vos deadlines.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" class="d-block w-100" alt="Suivi progressif">
+                        <div class="carousel-caption">
+                            <h5>Suivi progressif détaillé</h5>
+                            <p>Grâce à notre application, visualisez en temps réel l'évolution de chaque tâche. Tableaux de bord analytiques, graphiques de progression et rapports automatisés.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80" class="d-block w-100" alt="Sécurité">
+                        <div class="carousel-caption">
+                            <h5>Gérez des milliers de projets en toute sécurité</h5>
+                            <p>Infrastructure robuste et sécurisée. Chiffrement de bout en bout, sauvegardes automatiques et conformité aux normes de sécurité informatique les plus strictes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeatures" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselFeatures" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+ <section class="why-section" id="nous">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pourquoi choisir TaskFlow?</h2>
+                <p>Une plateforme complète de gestion de projets conçue pour les ingénieurs des travaux informatiques qui recherchent efficacité et performance.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-progress"></div>
+
+                <!-- Item 1 - Gestion de Tâches -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-decoration"></div>
+                        <h3>Gestion de Tâches Intelligente</h3>
+                        <p>Créez, organisez et suivez toutes vos tâches avec un système intuitif. Priorisez vos activités, définissez des deadlines et suivez l'avancement en temps réel.</p>
+                        <a href="#" class="card-link">
+                            En savoir plus <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 - Suivi de Projets -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-decoration"></div>
+                        <h3>Suivi de Projets en Temps Réel</h3>
+                        <p>Visualisez l'état de vos projets informatiques avec des tableaux de bord détaillés. Diagrammes de Gantt, statistiques et rapports automatisés pour une vue d'ensemble complète.</p>
+                        <a href="#" class="card-link">
+                            En savoir plus <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 - Collaboration d'Équipe -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-decoration"></div>
+                        <h3>Collaboration d'Équipe</h3>
+                        <p>Travaillez efficacement avec vos équipes. Assignez des tâches, partagez des documents, communiquez en temps réel et synchronisez vos efforts pour atteindre vos objectifs.</p>
+                        <a href="#" class="card-link">
+                            En savoir plus <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 - Rapports & Analytics -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-decoration"></div>
+                        <h3>Rapports & Analytics Avancés</h3>
+                        <p>Générez des rapports détaillés sur la productivité, les délais et les performances. Analysez les données pour optimiser vos processus et prendre des décisions éclairées.</p>
+                        <a href="#" class="card-link">
+                            En savoir plus <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer>
+        <div class="footer-content">
+            <!-- Stats Section -->
+            <div class="footer-stats">
+                <div class="stat-card">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Utilisateurs actifs</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Tâches gérées</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support disponible</span>
+                </div>
+            </div>
+
+            <!-- Footer Grid -->
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">TaskFlow</div>
+                    <p class="footer-description">
+                        La solution complète de gestion de projets pour les ingénieurs des travaux informatiques. 
+                        Planifiez, organisez et livrez vos projets avec efficacité.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Column -->
+                <div class="footer-column">
+                    <h4>Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Fonctionnalités</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Tarifs</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Témoignages</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Mises à jour</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div class="footer-column">
+                    <h4>Entreprise</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>À propos</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Carrières</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Partenaires</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Yaounde, Cameroun<br>centre</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@taskflow.cm</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+237 659 49 59 77</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2026 <a href="#">TaskFlow</a>. Tous droits réservés.
+                </div>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animation au scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.floating-navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Carousel automatique avec pause au survol
+        const carousel = document.querySelector('#carouselFeatures');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', function() {
+                const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                if (carouselInstance) {
+                    carouselInstance.pause();
+                }
+            });
+            
+            carousel.addEventListener('mouseleave', function() {
+                const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                if (carouselInstance) {
+                    carouselInstance.cycle();
+                }
+            });
+        }
+         // Animation de la barre de progression au scroll
+        function updateProgress() {
+            const timelineContainer = document.querySelector('.timeline-container');
+            const timelineProgress = document.querySelector('.timeline-progress');
+            
+            if (!timelineContainer || !timelineProgress) return;
+            
+            const containerRect = timelineContainer.getBoundingClientRect();
+            const containerTop = containerRect.top;
+            const containerHeight = containerRect.height;
+            const windowHeight = window.innerHeight;
+            
+            // Calculer le pourcentage de scroll dans le container
+            const scrollPercentage = Math.max(0, Math.min(1, 
+                (windowHeight - containerTop) / (containerHeight + windowHeight)
+            ));
+            
+            // Mettre à jour la hauteur de la barre de progression
+            timelineProgress.style.height = `${scrollPercentage * 100}%`;
+        }
+
+        // Animation des items au scroll
+        function animateItems() {
+            const items = document.querySelectorAll('.timeline-item');
+            
+            items.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (itemTop < windowHeight * 0.8) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            updateProgress();
+            animateItems();
+        });
+
+        window.addEventListener('load', () => {
+            updateProgress();
+            animateItems();
+        });
+
+        // Initial check
+        updateProgress();
+        animateItems();
+    </script>
+</body>
+</html>
