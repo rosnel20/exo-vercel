@@ -29,22 +29,15 @@
                     <h3>Inscription</h3>
                     <p class="subtitle">Créez votre compte professionnel</p>
 
-                    @if($errors->any())
-                        <div class="alert alert-danger">
-                            @foreach($errors->all() as $error)
-                                <p>{{ $error }}</p>
-                            @endforeach
-                        </div>
-                    @endif
 
-                    <form id="signupForm" method="POST" action="{{ route('register') }}">
-                        @csrf
+                    <form id="signupForm" method="POST" action="">
+                        
                         
                         <div class="form-group">
                             <div class="input-wrapper">
                                 <i class="fas fa-user input-icon"></i>
                                 <input type="text" name="name" id="name" placeholder="Nom d'utilisateur" 
-                                       value="{{ old('name') }}" required>
+                                       value="" required>
                             </div>
                         </div>
 
@@ -52,7 +45,7 @@
                             <div class="input-wrapper">
                                 <i class="fas fa-user input-icon"></i>
                                 <input type="text" name="prenom" id="prenom" placeholder="Prénom" 
-                                       value="{{ old('prenom') }}" required>
+                                       value="" required>
                             </div>
                         </div>
 
@@ -60,31 +53,24 @@
                             <div class="input-wrapper">
                                 <i class="fas fa-envelope input-icon"></i>
                                 <input type="email" name="email" id="email" placeholder="Votre email" 
-                                       value="{{ old('email') }}" required>
+                                       value="" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="phone-input-wrapper">
                                 <select class="country-select" id="countryCode" name="country_code">
-                                    <option value="+237" {{ old('country_code') == '+237' ? 'selected' : '' }}>🇨🇲 +237</option>
-                                    <option value="+33" {{ old('country_code') == '+33' ? 'selected' : '' }}>🇫🇷 +33</option>
-                                    <option value="+1" {{ old('country_code') == '+1' ? 'selected' : '' }}>🇺🇸 +1</option>
-                                    <option value="+44" {{ old('country_code') == '+44' ? 'selected' : '' }}>🇬🇧 +44</option>
-                                    <option value="+49" {{ old('country_code') == '+49' ? 'selected' : '' }}>🇩🇪 +49</option>
-                                    <option value="+39" {{ old('country_code') == '+39' ? 'selected' : '' }}>🇮🇹 +39</option>
-                                    <option value="+34" {{ old('country_code') == '+34' ? 'selected' : '' }}>🇪🇸 +34</option>
-                                    <option value="+32" {{ old('country_code') == '+32' ? 'selected' : '' }}>🇧🇪 +32</option>
-                                    <option value="+41" {{ old('country_code') == '+41' ? 'selected' : '' }}>🇨🇭 +41</option>
-                                    <option value="+212" {{ old('country_code') == '+212' ? 'selected' : '' }}>🇲🇦 +212</option>
-                                    <option value="+213" {{ old('country_code') == '+213' ? 'selected' : '' }}>🇩🇿 +213</option>
-                                    <option value="+225" {{ old('country_code') == '+225' ? 'selected' : '' }}>🇨🇮 +225</option>
-                                    <option value="+221" {{ old('country_code') == '+221' ? 'selected' : '' }}>🇸🇳 +221</option>
-                                    <option value="+234" {{ old('country_code') == '+234' ? 'selected' : '' }}>🇳🇬 +234</option>
-                                    <option value="+243" {{ old('country_code') == '+243' ? 'selected' : '' }}>🇨🇩 +243</option>
+                                    <option value="+237" >🇨🇲 +237</option>
+                                    <option value="+33" >🇫🇷 +33</option>
+                                    <option value="+1" >🇺🇸 +1</option>
+                                    <option value="+44" >🇬🇧 +44</option>
+                                    <option value="+49" >🇩🇪 +49</option>
+                                    <option value="+39" >🇮🇹 +39</option>
+                                    <option value="+34" >🇪🇸 +34</option>
+                                    <option value="+32" >🇧🇪 +32</option>
                                 </select>
                                 <input type="tel" name="phone" id="phone" placeholder="Numéro de téléphone" 
-                                       value="{{ old('phone') }}" required>
+                                       required>
                             </div>
                         </div>
 

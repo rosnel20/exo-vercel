@@ -29,28 +29,15 @@
                     <h3>Connexion</h3>
                     <p class="subtitle">Accédez à votre compte TaskFlow</p>
 
-                    @if(session('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
 
-                    @if($errors->any())
-                        <div class="alert alert-danger">
-                            @foreach($errors->all() as $error)
-                                <p>{{ $error }}</p>
-                            @endforeach
-                        </div>
-                    @endif
-
-                    <form id="loginForm" method="POST" action="{{ route('login') }}">
-                        @csrf
+                    <form id="loginForm" method="POST" action="">
+                       
                         
                         <div class="form-group">
                             <div class="input-wrapper">
                                 <i class="fas fa-envelope input-icon"></i>
                                 <input type="email" name="email" id="email" placeholder="Votre email" 
-                                       value="{{ old('email') }}" required>
+                                       required>
                             </div>
                         </div>
 
